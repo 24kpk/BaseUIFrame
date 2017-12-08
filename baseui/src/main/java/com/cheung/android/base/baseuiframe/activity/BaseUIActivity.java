@@ -23,13 +23,10 @@ import com.qmuiteam.qmui.widget.QMUITopBar;
 public abstract class BaseUIActivity extends AppCompatActivity implements IActivity {
     protected Activity mActivity;
 
-    private View mBaseView;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = this;
-
         BaseActivityStack.getInstance().addActivity(this);
         setContentView(getLayoutResId());
     }
