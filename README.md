@@ -1,5 +1,8 @@
 # BaseUIFrame #
+[![](https://jitpack.io/v/24kpk/BaseUIFrame.svg)](https://jitpack.io/#24kpk/BaseUIFrame)
+
 采用QMUI作为基础样式搭建的基础UI框架
+
  
 ## 使用步骤 ##
 BaseUIFrame已经更新到[jitpack](https://jitpack.io/)上，使用AndroidStudio导入即可.
