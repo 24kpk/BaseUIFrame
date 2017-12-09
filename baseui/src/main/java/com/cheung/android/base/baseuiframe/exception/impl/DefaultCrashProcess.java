@@ -61,28 +61,31 @@ public class DefaultCrashProcess implements ICrashProcess {
         PackageManager pm = mContext.getPackageManager();
         PackageInfo pi =
                 pm.getPackageInfo(mContext.getPackageName(), PackageManager.GET_ACTIVITIES);
-        pw.println("设备信息：");
-        pw.print("App Version Name: ");
+        pw.println("App信息：");
+        pw.println("------------------------------------");
+        pw.print("App 版本: ");
         pw.println(pi.versionName);
-        pw.print("App Version Code: ");
+        pw.print("App Code: ");
         pw.println(pi.versionCode);
-
+        pw.println("------------------------------------");
+        pw.println("设备信息：");
+        pw.println("------------------------------------");
         // android版本号
-        pw.print("SDK: ");
+        pw.print("Android 版本号: ");
         pw.println(Build.VERSION.SDK_INT);
-        pw.print("OS Version: ");
+        pw.print("Android OS 版本名称: ");
         pw.println(Build.VERSION.RELEASE);
 
         // 手机制造商
-        pw.print("Vendor: ");
+        pw.print("设备制造商: ");
         pw.println(Build.MANUFACTURER);
 
         // 手机型号
-        pw.print("Model: ");
+        pw.print("设备型号: ");
         pw.println(Build.MODEL);
 
         // cpu架构
-        pw.print("CPU ABI: ");
+        pw.print("CPU架构-->CPU ABI: ");
         pw.println(Build.CPU_ABI);
         pw.println("------------------------------------");
         pw.println();

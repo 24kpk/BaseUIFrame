@@ -31,7 +31,7 @@ public class MainActivity extends BaseUIActivity {
 
     @OnClick(R.id.btn)
     public void click(){
-        Print.d("SSSSSSSSSSSSSSS");
+        Print.d("SSSSSSSSSSSSSSS"+9/0);
         ToastUtil.showToast("!!!!!!!!!!");
     }
 
