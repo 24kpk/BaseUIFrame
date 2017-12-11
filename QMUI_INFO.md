@@ -85,3 +85,64 @@ Application的Theme**继承BaseUIFrameAppTheme**
         }
     }
     
+    
+## 基础组件 ##
+
+### QMUIRoundButton ###
+
+使按钮能方便地指定圆角、边框颜色、边框粗细、背景色
+
+注意: 因为该控件的圆角采用 View 的 background 实现, 所以与原生的 <code>android:background</code> 有冲突。
+
+- 如果在 xml 中用 <code>android:background</code> 指定 background, 该 background 不会生效。</li>
+- 如果在该 View 构造完后用 `#setBackgroundResource(int)` 等方法设置背景, 该背景将覆盖圆角效果。</li>
+
+
+如需在 xml 中指定圆角、边框颜色、边框粗细、背景色等值,采用 xml 属性 `com.qmuiteam.qmui.R.styleable#QMUIRoundButton`
+
+
+
+圆角为高度的一半 
+
+- `app:qmui_isRadiusAdjustBounds="true"`
+
+指定圆角方向 
+
+- `app:qmui_radiusTopLeft="8dp"` 
+- `app:qmui_radiusTopRight="8dp"`
+- `app:qmui_radiusBottomLeft="8dp"`
+- `app:qmui_radiusBottomRight="8dp"`
+
+示例代码
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:text="圆角为高度的一半"
+            app:qmui_isRadiusAdjustBounds="true"/>
+            
+### QMUIDialog ###
+消息类型对话框（蓝色按钮）
+
+	new QMUIDialog.MessageDialogBuilder(mActivity)
+	                .setTitle("标题")
+	                .setMessage("确定要发送吗？")
+	                .addAction("取消", new QMUIDialogAction.ActionListener() {
+	                    @Override
+	                    public void onClick(QMUIDialog dialog, int index) {
+	                        dialog.dismiss();
+	                    }
+	                }).addAction("确定", new QMUIDialogAction.ActionListener() {
+	                    @Override
+	                    public void onClick(QMUIDialog dialog, int index) {
+	                        ToastUtil.showToast("点击了确定按钮");
+	                        dialog.dismiss();
+	                    }
+	                })
+	                .show();
