@@ -13,6 +13,7 @@ import com.cheung.android.base.baseuiframe.recyclerview.decorator.DividerItemDec
 import com.cheung.android.base.baseuiframe.recyclerview.decorator.GridDividerItemDecoration;
 import com.cheung.android.demo.baseuiframe.MyApp;
 import com.cheung.android.demo.baseuiframe.R;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 
@@ -45,7 +46,7 @@ public class BasicComponentsFragment extends BaseFragment {
 
     @Override
     protected void initUI(View parentView) {
-        ButterKnife.bind(this,parentView);
+        ButterKnife.bind(this, parentView);
         topBar.setTitle("基础组件");
         topBar.removeAllLeftViews();
 
@@ -65,7 +66,7 @@ public class BasicComponentsFragment extends BaseFragment {
 //        //设置分割线
 //        recyclerView.addItemDecoration(new GridDividerItemDecoration(getContext(), 3));
 
-        adapter = new BasicComponentsListAdapter(android.R.layout.simple_list_item_1,null);
+        adapter = new BasicComponentsListAdapter(android.R.layout.simple_list_item_1, null);
         recyclerView.setAdapter(adapter);
 
         adapter.setNewData(listDate);
@@ -73,18 +74,22 @@ public class BasicComponentsFragment extends BaseFragment {
             @Override
             public void onItemClick(View view, int i) {
                 Intent intent = null;
-                switch (i){
-                    case 0:
-                        intent = new Intent(mActivity,RoundButtonActivity.class);
-                        intent.putExtra(MyApp.INTENT_VALUE_TITLE_STR,"RoundButton");
+                switch (i) {
+                    case 0://RoundButton
+                        intent = new Intent(mActivity, RoundButtonActivity.class);
+
+                        break;
+                    case 1://QMUIDialog
+                        intent = new Intent(mActivity, QMUIDialogActivity.class);
                         break;
                 }
+                intent.putExtra(MyApp.INTENT_VALUE_TITLE_STR, listDate.get(i));
                 startActivity(intent);
             }
         });
     }
 
-    class BasicComponentsListAdapter extends BaseQuickAdapter<String>{
+    class BasicComponentsListAdapter extends BaseQuickAdapter<String> {
 
         public BasicComponentsListAdapter(int layoutResId, List<String> data) {
             super(layoutResId, data);
@@ -92,7 +97,7 @@ public class BasicComponentsFragment extends BaseFragment {
 
         @Override
         protected void convert(BaseViewHolder baseViewHolder, String s) {
-            baseViewHolder.setText(android.R.id.text1,s);
+            baseViewHolder.setText(android.R.id.text1, s);
         }
     }
 

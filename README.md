@@ -126,3 +126,23 @@ Application的Theme**继承BaseUIFrameAppTheme**
             android:paddingTop="10dp"
             android:text="圆角为高度的一半"
             app:qmui_isRadiusAdjustBounds="true"/>
+            
+### QMUIDialog ###
+消息类型对话框（蓝色按钮）
+
+	new QMUIDialog.MessageDialogBuilder(mActivity)
+	                .setTitle("标题")
+	                .setMessage("确定要发送吗？")
+	                .addAction("取消", new QMUIDialogAction.ActionListener() {
+	                    @Override
+	                    public void onClick(QMUIDialog dialog, int index) {
+	                        dialog.dismiss();
+	                    }
+	                }).addAction("确定", new QMUIDialogAction.ActionListener() {
+	                    @Override
+	                    public void onClick(QMUIDialog dialog, int index) {
+	                        ToastUtil.showToast("点击了确定按钮");
+	                        dialog.dismiss();
+	                    }
+	                })
+	                .show();

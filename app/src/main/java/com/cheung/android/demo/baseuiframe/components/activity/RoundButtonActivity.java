@@ -15,8 +15,6 @@ public class RoundButtonActivity extends BaseUIActivity {
     @BindView(R.id.topbar)
     QMUITopBar topBar;
 
-    @BindView(R.id.test1)
-    QMUIRoundButton btn1;
 
     String title;
     @Override
