@@ -95,10 +95,10 @@ Application的Theme**继承BaseUIFrameAppTheme**
 注意: 因为该控件的圆角采用 View 的 background 实现, 所以与原生的 <code>android:background</code> 有冲突。
 
 - 如果在 xml 中用 <code>android:background</code> 指定 background, 该 background 不会生效。</li>
-- 如果在该 View 构造完后用 {@link #setBackgroundResource(int)} 等方法设置背景, 该背景将覆盖圆角效果。</li>
+- 如果在该 View 构造完后用 `#setBackgroundResource(int)` 等方法设置背景, 该背景将覆盖圆角效果。</li>
 
 
-如需在 xml 中指定圆角、边框颜色、边框粗细、背景色等值,采用 xml 属性 {@link com.qmuiteam.qmui.R.styleable#QMUIRoundButton}
+如需在 xml 中指定圆角、边框颜色、边框粗细、背景色等值,采用 xml 属性 `com.qmuiteam.qmui.R.styleable#QMUIRoundButton`
 
 
 
