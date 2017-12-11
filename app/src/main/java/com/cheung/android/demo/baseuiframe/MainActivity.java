@@ -48,7 +48,7 @@ public class MainActivity extends BaseUIActivity {
         //设置底标位置 默认在下方
         mTabSegment.setIndicatorPosition(false);
 
-
+        //必须调用mTabSegment.setupWithViewPager(mContentViewPager,false);和ViewPager关联起来才回展示TAB
         mTabSegment.addTab(new QMUITabSegment.Tab(
                 "ONE"
         )).addTab(new QMUITabSegment.Tab(
