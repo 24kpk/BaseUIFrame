@@ -46,7 +46,7 @@ public class MainActivity extends BaseUIActivity {
         //设置显示底标 默认不显示
         mTabSegment.setHasIndicator(true);
         //设置底标位置 默认在下方
-        mTabSegment.setIndicatorPosition(false);
+        mTabSegment.setIndicatorPosition(true);
 
         //必须调用mTabSegment.setupWithViewPager(mContentViewPager,false);和ViewPager关联起来才回展示TAB
         mTabSegment.addTab(new QMUITabSegment.Tab(
@@ -58,7 +58,6 @@ public class MainActivity extends BaseUIActivity {
         )).addTab(new QMUITabSegment.Tab(
                 "FOUR"
         ));
-
 
         mainFPagerAdaper = new MainFPagerAdaper(getSupportFragmentManager());
         mContentViewPager.setOffscreenPageLimit(3);

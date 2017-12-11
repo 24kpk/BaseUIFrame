@@ -107,6 +107,7 @@ public abstract class BaseFragment  extends Fragment {
             mBaseView = parentView;
         }
         QMUIViewHelper.requestApplyInsets(getActivity().getWindow());
+        initUI(parentView);
         return mBaseView;
     }
 
@@ -170,9 +171,16 @@ public abstract class BaseFragment  extends Fragment {
     }
 
     /**
-     * onCreateView
+     * getLayoutResId
      */
     protected abstract int getLayoutResId();
+
+    /**
+     * initUI
+     * @param parentView
+     * @return
+     */
+    protected abstract void initUI(View parentView);
 
     //============================= 新流程 ================================
 

@@ -1,5 +1,7 @@
 package com.cheung.android.demo.baseuiframe.fragment;
 
+import android.view.View;
+
 import com.cheung.android.base.baseuiframe.activity.BaseFragment;
 import com.cheung.android.demo.baseuiframe.R;
 
@@ -13,5 +15,10 @@ public class TwoFragment extends BaseFragment {
     @Override
     protected int getLayoutResId() {
         return R.layout.fragment_two;
+    }
+
+    @Override
+    protected void initUI(View parentView) {
+
     }
 }

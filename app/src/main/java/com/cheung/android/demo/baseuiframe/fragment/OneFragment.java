@@ -16,4 +16,9 @@ public class OneFragment extends BaseFragment {
     protected int getLayoutResId() {
         return R.layout.fragment_one;
     }
+
+    @Override
+    protected void initUI(View parentView) {
+
+    }
 }
