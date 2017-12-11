@@ -6,6 +6,7 @@ import com.cheung.android.base.baseuiframe.activity.BaseUIActivity;
 import com.cheung.android.demo.baseuiframe.MyApp;
 import com.cheung.android.demo.baseuiframe.R;
 import com.qmuiteam.qmui.widget.QMUITopBar;
+import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -14,6 +15,8 @@ public class RoundButtonActivity extends BaseUIActivity {
     @BindView(R.id.topbar)
     QMUITopBar topBar;
 
+    @BindView(R.id.test1)
+    QMUIRoundButton btn1;
 
     String title;
     @Override
@@ -24,6 +27,8 @@ public class RoundButtonActivity extends BaseUIActivity {
         if(title!=null) {
             topBar.setTitle(title);
         }
+
+
     }
 
     @Override
