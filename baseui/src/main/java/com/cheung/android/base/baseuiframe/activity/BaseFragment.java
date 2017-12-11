@@ -1,5 +1,6 @@
 package com.cheung.android.base.baseuiframe.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -25,6 +26,7 @@ import com.qmuiteam.qmui.widget.QMUIWindowInsetLayout;
  * description: 基础 Fragment 类，提供各种基础功能。
  */
 public abstract class BaseFragment  extends Fragment {
+    protected Activity mActivity;
     // 资源，放在业务初始化，会在业务层
     protected static final TransitionConfig SLIDE_TRANSITION_CONFIG = new TransitionConfig(
             R.anim.slide_in_right, R.anim.slide_out_left,
@@ -92,6 +94,7 @@ public abstract class BaseFragment  extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        mActivity = getActivity();
         View parentView = inflater.inflate(getLayoutResId(), container, false);
         if (translucentFull()) {
             if (parentView instanceof QMUIWindowInsetLayout) {

@@ -1,0 +1,23 @@
+<resources>
+    <string-array name="ary_basic_components">
+        <item>RoundButton</item>
+        <item>QMUIDialog</item>
+        <item>QMUIFloatLayout</item>
+        <item>QMUIEmptyView</item>
+        <item>QMUITabSegment</item>
+        <item>QMUIProgressBar</item>
+        <item>QMUIBottomSheet</item>
+        <item>QMUIGroupListView</item>
+        <item>QMUITipDialog</item>
+        <item>QMUIRadiusImageView</item>
+        <item>QMUIVerticalTextView</item>
+        <item>QMUIPullRefreshLayout</item>
+        <item>QMUIPopup</item>
+        <item>QMUISpanTouchFixTextView</item>
+        <item>QMUILinkTextView</item>
+        <item>QMUIQQFaceView</item>
+        <item>Span</item>
+        <item>QMUICollapsingTopBarLayout</item>
+        <item>QMUIViewPager</item>
+    </string-array>
+</resources>

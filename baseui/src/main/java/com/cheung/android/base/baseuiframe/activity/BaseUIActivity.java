@@ -51,7 +51,6 @@ public abstract class BaseUIActivity extends AppCompatActivity implements IActiv
                     mActivity.finish();
                 }
             });
-            mTopBar.setTitle(getResources().getString(R.string.app_name));
         }else {
             mTopBar.setVisibility(View.GONE);
         }

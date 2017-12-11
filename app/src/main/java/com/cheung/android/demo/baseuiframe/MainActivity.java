@@ -8,20 +8,17 @@ import android.support.v4.view.ViewPager;
 
 import com.cheung.android.base.baseuiframe.activity.BaseUIActivity;
 import com.cheung.android.demo.baseuiframe.fragment.FourFragment;
-import com.cheung.android.demo.baseuiframe.fragment.OneFragment;
+import com.cheung.android.demo.baseuiframe.fragment.BasicComponentsFragment;
 import com.cheung.android.demo.baseuiframe.fragment.ThrFragment;
 import com.cheung.android.demo.baseuiframe.fragment.TwoFragment;
 import com.qmuiteam.qmui.util.QMUIResHelper;
 import com.qmuiteam.qmui.widget.QMUITabSegment;
-import com.qmuiteam.qmui.widget.QMUITopBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 public class MainActivity extends BaseUIActivity {
-    @BindView(R.id.topbar)
-    QMUITopBar mTopBar;
     @BindView(R.id.tabSegment)
     QMUITabSegment mTabSegment;
     @BindView(R.id.contentViewPager)
@@ -29,11 +26,18 @@ public class MainActivity extends BaseUIActivity {
 
 
     private MainFPagerAdaper mainFPagerAdaper;
+
+
+    //不使用通用TITLE
+    @Override
+    protected boolean useTopBar() {
+        return false;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(mActivity);
-        initTopBar();
 
         int normalColor = QMUIResHelper.getAttrColor(mActivity, R.attr.qmui_config_color_gray_6);
         int selectColor = QMUIResHelper.getAttrColor(mActivity, R.attr.qmui_config_color_blue);
@@ -50,7 +54,7 @@ public class MainActivity extends BaseUIActivity {
 
         //必须调用mTabSegment.setupWithViewPager(mContentViewPager,false);和ViewPager关联起来才回展示TAB
         mTabSegment.addTab(new QMUITabSegment.Tab(
-                "ONE"
+                "基础组件"
         )).addTab(new QMUITabSegment.Tab(
                 "TWO"
         )).addTab(new QMUITabSegment.Tab(
@@ -75,10 +79,6 @@ public class MainActivity extends BaseUIActivity {
     }
 
 
-    private void initTopBar() {
-        mTopBar.setTitle("测试");
-        mTopBar.removeAllLeftViews();
-    }
 
 
 
@@ -94,7 +94,7 @@ public class MainActivity extends BaseUIActivity {
             Fragment retFragment = null;
             switch (position) {
                 case 0:
-                    retFragment = new OneFragment();
+                    retFragment = new BasicComponentsFragment();
                     break;
                 case 1:
                     retFragment = new TwoFragment();

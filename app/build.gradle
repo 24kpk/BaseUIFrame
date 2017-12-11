@@ -22,6 +22,10 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':baseui')
     //注解
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    //RecyclerViewAdapter
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7'
 }

@@ -10,6 +10,7 @@ import com.cheung.android.base.baseuiframe.BasicConfig;
  * description:
  */
 public class MyApp extends Application {
+    public static final String INTENT_VALUE_TITLE_STR = MyApp.class.getSimpleName()+".intent.string.title";
     @Override
     public void onCreate() {
         super.onCreate();
