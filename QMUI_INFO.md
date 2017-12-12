@@ -339,53 +339,51 @@ Java代码
 - 提供了 `Section` 的概念, 用来将列表分块。 具体见 `QMUIGroupListView.Section`
 
 
- * <pre>
- *         QMUIGroupListView groupListView = new QMUIGroupListView(context);
- *         // section 1
- *         QMUIGroupListView.newSection(context)
- *                 .setTitle("Section Title 1")
- *                 .setDescription("这是Section 1的描述")
- *                 .addItemView(groupListView.createItemView("item 1"), new OnClickListener() {
- *                     @Override
- *                     public void onClick(View v) {
- *                         Toast.makeText(context, "section 1 item 1", Toast.LENGTH_SHORT).show();
- *                     }
- *                 })
- *                 .addItemView(groupListView.createItemView("item 2"), new OnClickListener() {
- *                     @verride
- *                     public void onClick(View v) {
- *                         Toast.makeText(context, "section 1 item 2", Toast.LENGTH_SHORT).show();
- *                     }
- *                 })
- *                 // 设置分隔线的样式
- *                 .setSeparatorDrawableRes(
- *                         R.drawable.list_group_item_single_bg,
- *                         R.drawable.personal_list_group_item_top_bg,
- *                         R.drawable.list_group_item_bottom_bg,
- *                         R.drawable.personal_list_group_item_middle_bg)
- *                 // 如果没有title,加上默认title【Section n】
- *                 .setUseDefaultTitleIfNone(true)
- *                 // 默认使用TitleView的padding作section分隔,可以设置为false取消它
- *                 .setUseTitleViewForSectionSpace(false)
- *                 .addTo(groupListView);
- 
- *         // section 2
- *         QMUIGroupListView.newSection(context)
- *                 .setTitle("Section Title 2")
- *                 .setDescription("这是Section 2的描述")
- *                 .addItemView(groupListView.createItemView("item 1"), new OnClickListener() {
- *                     @Override
- *                     public void onClick(View v) {
- *                         Toast.makeText(context, "section 2 item 1", Toast.LENGTH_SHORT).show();
- *                     }
- *                 })
- *                 .addItemView(groupListView.createItemView("item 2"), new OnClickListener() {
- *                     @Override
- *                     public void onClick(View v) {
- *                         Toast.makeText(context, "section 2 item 2", Toast.LENGTH_SHORT).show();
- *                     }
- *                 })
- *                 .addTo(groupListView);
+		QMUIGroupListView groupListView = new QMUIGroupListView(context);
+		// section 1
+		QMUIGroupListView.newSection(context)
+		     .setTitle("Section Title 1")
+		     .setDescription("这是Section 1的描述")
+		     .addItemView(groupListView.createItemView("item 1"), new OnClickListener() {
+		         @Override
+		         public void onClick(View v) {
+		             Toast.makeText(context, "section 1 item 1", Toast.LENGTH_SHORT).show();
+		         }
+		     })
+		     .addItemView(groupListView.createItemView("item 2"), new OnClickListener() {
+		         @verride
+		         public void onClick(View v) {
+		             Toast.makeText(context, "section 1 item 2", Toast.LENGTH_SHORT).show();
+		         }
+		     })
+		     // 设置分隔线的样式
+		     .setSeparatorDrawableRes(
+		             R.drawable.list_group_item_single_bg,
+		             R.drawable.personal_list_group_item_top_bg,
+		             R.drawable.list_group_item_bottom_bg,
+		             R.drawable.personal_list_group_item_middle_bg)
+		     // 如果没有title,加上默认title【Section n】
+		     .setUseDefaultTitleIfNone(true)
+		     // 默认使用TitleView的padding作section分隔,可以设置为false取消它
+		     .setUseTitleViewForSectionSpace(false)
+		     .addTo(groupListView);
+		
+		// section 2
+		QMUIGroupListView.newSection(context)
+		     .setTitle("Section Title 2")
+		     .setDescription("这是Section 2的描述")
+		     .addItemView(groupListView.createItemView("item 1"), new OnClickListener() {
+		         @Override
+		         public void onClick(View v) {
+		             Toast.makeText(context, "section 2 item 1", Toast.LENGTH_SHORT).show();
+		         }
+		     })
+		     .addItemView(groupListView.createItemView("item 2"), new OnClickListener() {
+		         @Override
+		         public void onClick(View v) {
+		             Toast.makeText(context, "section 2 item 2", Toast.LENGTH_SHORT).show();
+		         }
+		     })
 
 
 ### QMUITipDialog ###
