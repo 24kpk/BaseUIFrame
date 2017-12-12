@@ -18,6 +18,7 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUIBottomSheetAc
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIEmptyViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIGroupListViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
@@ -101,6 +102,9 @@ public class BasicComponentsFragment extends BaseFragment {
                         break;
                     case 6:
                         intent = new Intent(mActivity,QMUIBottomSheetActivity.class);
+                        break;
+                    case 7:
+                        intent = new Intent(mActivity, QMUIGroupListViewActivity.class);
                         break;
 
                 }

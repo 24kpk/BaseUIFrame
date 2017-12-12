@@ -20,7 +20,8 @@
         <activity android:name=".components.activity.QMUIFloatLayoutActivity" />
         <activity android:name=".components.activity.QMUIEmptyViewActivity" />
         <activity android:name=".components.activity.QMUIProgressBarActivity" />
-        <activity android:name=".components.activity.QMUIBottomSheetActivity"></activity>
+        <activity android:name=".components.activity.QMUIBottomSheetActivity" />
+        <activity android:name=".components.activity.QMUIGroupListViewActivity"></activity>
     </application>
 
 </manifest>
