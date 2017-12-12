@@ -19,7 +19,8 @@
         <activity android:name=".components.activity.QMUIDialogActivity" />
         <activity android:name=".components.activity.QMUIFloatLayoutActivity" />
         <activity android:name=".components.activity.QMUIEmptyViewActivity" />
-        <activity android:name=".components.activity.QMUIProgressBarActivity"></activity>
+        <activity android:name=".components.activity.QMUIProgressBarActivity" />
+        <activity android:name=".components.activity.QMUIBottomSheetActivity"></activity>
     </application>
 
 </manifest>

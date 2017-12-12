@@ -14,6 +14,7 @@ import com.cheung.android.base.baseuiframe.recyclerview.decorator.GridDividerIte
 import com.cheung.android.base.baseuiframe.utils.ToastUtil;
 import com.cheung.android.demo.baseuiframe.MyApp;
 import com.cheung.android.demo.baseuiframe.R;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIBottomSheetActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIEmptyViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
@@ -97,6 +98,9 @@ public class BasicComponentsFragment extends BaseFragment {
                         return;
                     case 5://QMUIProgress
                         intent = new Intent(mActivity,QMUIProgressBarActivity.class);
+                        break;
+                    case 6:
+                        intent = new Intent(mActivity,QMUIBottomSheetActivity.class);
                         break;
 
                 }
