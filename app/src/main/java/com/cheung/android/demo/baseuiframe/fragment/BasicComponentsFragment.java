@@ -11,9 +11,11 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.cheung.android.base.baseuiframe.activity.BaseFragment;
 import com.cheung.android.base.baseuiframe.recyclerview.decorator.DividerItemDecoration;
 import com.cheung.android.base.baseuiframe.recyclerview.decorator.GridDividerItemDecoration;
+import com.cheung.android.base.baseuiframe.utils.ToastUtil;
 import com.cheung.android.demo.baseuiframe.MyApp;
 import com.cheung.android.demo.baseuiframe.R;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIDialogActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIEmptyViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
@@ -83,9 +85,19 @@ public class BasicComponentsFragment extends BaseFragment {
                     case 1://QMUIDialog
                         intent = new Intent(mActivity, QMUIDialogActivity.class);
                         break;
-                    case 2://QMUIFloatLayoutActivity
+                    case 2://QMUIFloatLayout
                         intent = new Intent(mActivity,QMUIFloatLayoutActivity.class);
                         break;
+                    case 3://QMUIEmptyView
+                        intent = new Intent(mActivity,QMUIEmptyViewActivity.class);
+                        break;
+                    case 4:
+                        ToastUtil.showToast("QMUITabSegment 当前首页即为QMUITabSegment");
+                        return;
+
+                }
+                if(intent == null) {
+                    return;
                 }
                 intent.putExtra(MyApp.INTENT_VALUE_TITLE_STR, listDate.get(i));
                 startActivity(intent);

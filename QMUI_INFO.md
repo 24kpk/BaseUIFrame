@@ -267,3 +267,32 @@ Application的Theme**继承BaseUIFrameAppTheme**
 高度适应键盘升降的对话框
 
 	QMUIKeyboardHelper.showKeyboard(autoTestDialogBuilder.getEditText(), true);
+
+### QMUIEmptyView ###
+
+	<com.qmuiteam.qmui.widget.QMUIEmptyView
+	        android:id="@+id/emptyView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="?attr/qmui_topbar_height"
+	        android:background="@color/qmui_config_color_white"
+	        app:qmui_title_text="我是一个EmptyView"
+	        app:qmui_detail_text="通过右上角的菜单来切换我的不同状态"/>
+
+Java代码
+
+		/**
+	     * 显示emptyView
+	     * @param loading 是否要显示loading
+	     * @param titleText 标题的文字，不需要则传null
+	     * @param detailText 详情文字，不需要则传null
+	     * @param buttonText 按钮的文字，不需要按钮则传null
+	     * @param onButtonClickListener 按钮的onClick监听，不需要则传null
+	     */
+	    public void show(boolean loading, String titleText, String detailText, String buttonText, OnClickListener onButtonClickListener) {
+	        setLoadingShowing(loading);
+	        setTitleText(titleText);
+	        setDetailText(detailText);
+	        setButton(buttonText, onButtonClickListener);
+	        show();
+	    }
