@@ -22,7 +22,8 @@
         <activity android:name=".components.activity.QMUIProgressBarActivity" />
         <activity android:name=".components.activity.QMUIBottomSheetActivity" />
         <activity android:name=".components.activity.QMUIGroupListViewActivity" />
-        <activity android:name=".components.activity.QMUITipDialogActivity"></activity>
+        <activity android:name=".components.activity.QMUITipDialogActivity" />
+        <activity android:name=".components.activity.QMUIRadiusImageViewActivity"></activity>
     </application>
 
 </manifest>
