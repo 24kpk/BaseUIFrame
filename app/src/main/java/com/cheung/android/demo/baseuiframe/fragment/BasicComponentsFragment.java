@@ -17,6 +17,7 @@ import com.cheung.android.demo.baseuiframe.R;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIEmptyViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 
@@ -91,9 +92,12 @@ public class BasicComponentsFragment extends BaseFragment {
                     case 3://QMUIEmptyView
                         intent = new Intent(mActivity,QMUIEmptyViewActivity.class);
                         break;
-                    case 4:
+                    case 4://QMUITabSegment
                         ToastUtil.showToast("QMUITabSegment 当前首页即为QMUITabSegment");
                         return;
+                    case 5://QMUIProgress
+                        intent = new Intent(mActivity,QMUIProgressBarActivity.class);
+                        break;
 
                 }
                 if(intent == null) {

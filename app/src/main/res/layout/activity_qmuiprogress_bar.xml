@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/qmui_content_spacing_horizontal"
+    android:gravity="center_horizontal"
     tools:context="com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity">
+    <com.qmuiteam.qmui.widget.QMUIProgressBar
+        android:id="@+id/rectProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:textColor="@color/qmui_config_color_white"
+        android:textSize="16sp"
+        app:qmui_background_color="@color/qmui_config_color_gray_8"
+        app:qmui_progress_color="@color/app_color_blue_2"
+        app:qmui_type="type_rect"/>
 
-</android.support.constraint.ConstraintLayout>
+    <com.qmuiteam.qmui.widget.QMUIProgressBar
+        android:id="@+id/circleProgressBar"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:textColor="?attr/qmui_config_color_gray_4"
+        android:textSize="22sp"
+        app:qmui_background_color="?attr/qmui_config_color_gray_8"
+        app:qmui_progress_color="@color/app_color_blue_2"
+        app:qmui_stroke_width="18dp"
+        app:qmui_type="type_circle"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+        <Button
+            android:id="@+id/startBtn"
+            style="@style/QDRadiusButton"
+            android:layout_weight="1"
+            android:text="progress_start_button_text"/>
+        <Space
+            android:layout_width="@dimen/qmui_content_padding_horizontal"
+            android:layout_height="0dp"/>
+        <Button
+            android:id="@+id/backBtn"
+            style="@style/QDRadiusButton"
+            android:layout_weight="1"
+            android:text="progress_back_button_text"/>
+    </LinearLayout>
+</LinearLayout>
