@@ -386,3 +386,16 @@ Java代码
  *                     }
  *                 })
  *                 .addTo(groupListView);
+
+
+### QMUITipDialog ###
+常用类型提示框使用 `QMUITipDialog.Builder` 初始化
+
+	dialog = builder.setIconType(QMUITipDialog.Builder.ICON_TYPE_FAIL)
+	                        .setTipWord("失败提示类型提示框")
+	                        .create();
+自定义类型提示框使用 `QMUITipDialog.CustomBuilder` 初始化
+
+	dialog = new QMUITipDialog.CustomBuilder(mActivity)
+	                        .setContent(R.layout.tipdialog_custom)
+	                        .create();

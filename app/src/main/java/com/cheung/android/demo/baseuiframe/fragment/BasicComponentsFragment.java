@@ -20,6 +20,7 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUIEmptyViewActi
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIGroupListViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUITipDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 
@@ -100,11 +101,14 @@ public class BasicComponentsFragment extends BaseFragment {
                     case 5://QMUIProgress
                         intent = new Intent(mActivity,QMUIProgressBarActivity.class);
                         break;
-                    case 6:
+                    case 6://QMUIBottomSheet
                         intent = new Intent(mActivity,QMUIBottomSheetActivity.class);
                         break;
-                    case 7:
+                    case 7://QMUIGroupListView
                         intent = new Intent(mActivity, QMUIGroupListViewActivity.class);
+                        break;
+                    case 8:
+                        intent = new Intent(mActivity,QMUITipDialogActivity.class);
                         break;
 
                 }
