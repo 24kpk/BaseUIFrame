@@ -146,3 +146,124 @@ Application的Theme**继承BaseUIFrameAppTheme**
 	                    }
 	                })
 	                .show();
+消息类型对话框（红色按钮）
+
+	addAction(0,"删除",QMUIDialogAction.ACTION_PROP_NEGATIVE, new QMUIDialogAction.ActionListener() {
+	                    @Override
+	                    public void onClick(QMUIDialog dialog, int index) {
+	                        ToastUtil.showToast("点击了确定按钮");
+	                        dialog.dismiss();
+	                    }
+	                })
+
+菜单类型对话框 直接选择确认不带Check选项标识
+
+	private void showMenuDialog() {
+	        final String[] items = new String[]{"选项1", "选项2", "选项3"};
+	        new QMUIDialog.MenuDialogBuilder(mActivity)
+	                .addItems(items, new DialogInterface.OnClickListener() {
+	                    @Override
+	                    public void onClick(DialogInterface dialog, int which) {
+	                        ToastUtil.showToast("你选择了 " + items[which]);
+	                        dialog.dismiss();
+	                    }
+	                }).show();
+	    }
+带 Checkbox 的消息确认框
+
+	private void showConfirmMessageDialog() {
+	        new QMUIDialog.CheckBoxMessageDialogBuilder(mActivity)
+	                .setTitle("退出后是否删除账号信息？")
+	                .setMessage("删除账号信息")
+	                .setChecked(true)
+	                .addAction("取消", new QMUIDialogAction.ActionListener() {
+	                    @Override
+	                    public void onClick(QMUIDialog dialog, int index) {
+	                        dialog.dismiss();
+	                    }
+	                }).addAction("退出", new QMUIDialogAction.ActionListener() {
+	            @Override
+	            public void onClick(QMUIDialog dialog, int index) {
+	                ToastUtil.showToast("点击了退出按钮");
+	                dialog.dismiss();
+	            }
+	        }).show();
+	    }
+
+单选菜单类型对话框 带选中标识
+
+	private void showSingleChoiceDialog() {
+	        final String[] items = new String[]{"选项1", "选项2", "选项3"};
+	        final int checkedIndex = 0;
+	        new QMUIDialog.CheckableDialogBuilder(mActivity)
+	                .setCheckedIndex(checkedIndex)
+	                .addItems(items, new DialogInterface.OnClickListener() {
+	                    @Override
+	                    public void onClick(DialogInterface dialog, int which) {
+	                        ToastUtil.showToast("你选择了 " + items[which]);
+	                        dialog.dismiss();
+	                    }
+	                }).show();
+	    }
+多选菜单类型对话框
+
+    private void showMultiChoiceDialog() {
+        final String[] items = new String[]{"选项1", "选项2", "选项3", "选项4", "选项5", "选项6", "选项7", "选项8"};
+        final QMUIDialog.MultiCheckableDialogBuilder builder = new QMUIDialog.MultiCheckableDialogBuilder(mActivity)
+                .addItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        builder.setCheckedItems(new int[]{1,3,5});
+        builder.addAction("取消", new QMUIDialogAction.ActionListener() {
+            @Override
+            public void onClick(QMUIDialog dialog, int index) {
+                dialog.dismiss();
+            }
+        });
+        builder.addAction("确定", new QMUIDialogAction.ActionListener() {
+            @Override
+            public void onClick(QMUIDialog dialog, int index) {
+                String info = "您选择了 ";
+                for (int i : builder.getCheckedItemIndexes()) {
+                    info += i+";";
+                }
+                ToastUtil.showToast(info);
+                dialog.dismiss();
+            }
+        }).show();
+    }
+
+带输入框的对话框
+
+	private void showEditTextDialog() {
+	        final QMUIDialog.EditTextDialogBuilder builder = new QMUIDialog.EditTextDialogBuilder(mActivity);
+	        builder.setTitle("标题")
+	                .setPlaceholder("在此输入您的昵称")//HIDEN提示文字
+	                .setInputType(InputType.TYPE_CLASS_TEXT)//输入框的键盘类型
+	                .addAction("取消", new QMUIDialogAction.ActionListener() {
+	                    @Override
+	                    public void onClick(QMUIDialog dialog, int index) {
+	                        dialog.dismiss();
+	                    }
+	                })
+	                .addAction("确定", new QMUIDialogAction.ActionListener() {
+	                    @Override
+	                    public void onClick(QMUIDialog dialog, int index) {
+	                        CharSequence text = builder.getEditText().getText();
+	                        if (text != null && text.length() > 0) {
+	                            ToastUtil.showToast("您的昵称: " + text);
+	                            dialog.dismiss();
+	                        } else {
+	                            ToastUtil.showToast("请填入昵称" );
+	                        }
+	                    }
+	                });
+	        builder.show();
+	    }
+
+高度适应键盘升降的对话框
+
+	QMUIKeyboardHelper.showKeyboard(autoTestDialogBuilder.getEditText(), true);
