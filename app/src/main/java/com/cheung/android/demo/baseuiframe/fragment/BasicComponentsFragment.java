@@ -14,6 +14,7 @@ import com.cheung.android.base.baseuiframe.recyclerview.decorator.GridDividerIte
 import com.cheung.android.demo.baseuiframe.MyApp;
 import com.cheung.android.demo.baseuiframe.R;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIDialogActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 
@@ -81,6 +82,9 @@ public class BasicComponentsFragment extends BaseFragment {
                         break;
                     case 1://QMUIDialog
                         intent = new Intent(mActivity, QMUIDialogActivity.class);
+                        break;
+                    case 2://QMUIFloatLayoutActivity
+                        intent = new Intent(mActivity,QMUIFloatLayoutActivity.class);
                         break;
                 }
                 intent.putExtra(MyApp.INTENT_VALUE_TITLE_STR, listDate.get(i));

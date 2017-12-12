@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".components.activity.RoundButtonActivity" />
-        <activity android:name=".components.activity.QMUIDialogActivity"></activity>
+        <activity android:name=".components.activity.QMUIDialogActivity" />
+        <activity android:name=".components.activity.QMUIFloatLayoutActivity"></activity>
     </application>
 
 </manifest>

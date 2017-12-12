@@ -5,8 +5,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 
+import com.cheung.android.base.baseuiframe.activity.BaseActivityStack;
 import com.cheung.android.base.baseuiframe.activity.BaseUIActivity;
+import com.cheung.android.base.baseuiframe.utils.ToastUtil;
 import com.cheung.android.demo.baseuiframe.fragment.FourFragment;
 import com.cheung.android.demo.baseuiframe.fragment.BasicComponentsFragment;
 import com.cheung.android.demo.baseuiframe.fragment.ThrFragment;
@@ -26,7 +29,7 @@ public class MainActivity extends BaseUIActivity {
 
 
     private MainFPagerAdaper mainFPagerAdaper;
-
+    private long mLastClickReturnTime ;
 
     //不使用通用TITLE
     @Override
@@ -116,4 +119,21 @@ public class MainActivity extends BaseUIActivity {
     }
     ////////////////////////////////////////页面适配器end//////////////////////////////////////////////
 
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+            if (event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() == 0) {
+                //moveTaskToBack(true);
+                if(System.currentTimeMillis() - mLastClickReturnTime > 1000L) {
+                    mLastClickReturnTime = System.currentTimeMillis();
+                    ToastUtil.showToast("再按一次退出程序");
+                    return true;
+                }else {
+                    BaseActivityStack.getInstance().appExit(mActivity);
+                }
+            }
+        }
+        return super.dispatchKeyEvent(event);
+    }
 }
