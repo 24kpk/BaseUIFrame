@@ -55,7 +55,7 @@ public class QMUIDialogActivity extends BaseUIActivity implements BaseQuickAdapt
             "多选菜单类型对话框",
             "多选菜单类型对话框(item 数量很多的时候 会看不到确定、取消Action按钮)",
             "带输入框的对话框",
-            "高度适应键盘升降的对话框(自定义Dialog)"
+            "高度适应键盘升降的对话框(随键盘升降自动调整 Dialog 高度的 Builder)"
     };
     List<String> listData;
     QMUIDialogListAdapter adapter;
