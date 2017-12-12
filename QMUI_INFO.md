@@ -296,3 +296,38 @@ Java代码
 	        setButton(buttonText, onButtonClickListener);
 	        show();
 	    }
+### QMUIProgressBar ###
+直线
+
+	<com.qmuiteam.qmui.widget.QMUIProgressBar
+	        android:id="@+id/rectProgressBar"
+	        android:layout_width="match_parent"
+	        android:layout_height="24dp"
+	        android:textColor="@color/qmui_config_color_white"
+	        android:textSize="16sp"
+	        app:qmui_background_color="@color/qmui_config_color_gray_8"
+	        app:qmui_progress_color="@color/app_color_blue_2"
+	        app:qmui_type="type_rect"/>
+圆环
+
+	<com.qmuiteam.qmui.widget.QMUIProgressBar
+	        android:id="@+id/circleProgressBar"
+	        android:layout_width="250dp"
+	        android:layout_height="250dp"
+	        android:layout_marginTop="30dp"
+	        android:textColor="?attr/qmui_config_color_gray_4"
+	        android:textSize="22sp"
+	        app:qmui_background_color="?attr/qmui_config_color_gray_8"
+	        app:qmui_progress_color="@color/app_color_blue_2"
+	        app:qmui_stroke_width="15dp"
+	        app:qmui_type="type_circle"/>
+
+设置文字
+
+	mRectProgressBar.setQMUIProgressBarTextGenerator(new QMUIProgressBar.QMUIProgressBarTextGenerator() {
+	            @Override
+	            public String generateText(QMUIProgressBar progressBar, int value, int maxValue) {
+	                return value + "/" + maxValue;
+	            }
+	        });
+

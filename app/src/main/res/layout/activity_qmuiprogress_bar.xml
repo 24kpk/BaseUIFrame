@@ -27,7 +27,7 @@
         android:textSize="22sp"
         app:qmui_background_color="?attr/qmui_config_color_gray_8"
         app:qmui_progress_color="@color/app_color_blue_2"
-        app:qmui_stroke_width="18dp"
+        app:qmui_stroke_width="15dp"
         app:qmui_type="type_circle"/>
     <LinearLayout
         android:layout_width="match_parent"
