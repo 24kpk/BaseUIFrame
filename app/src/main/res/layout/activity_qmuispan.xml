@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cheung.android.demo.baseuiframe.components.activity.QMUISpanActivity">
+
+    <ScrollView
+        android:id="@+id/contentWrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qmui_config_color_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+            <!-- 支持垂直居中的 ImageSpan -->
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="支持垂直居中的 ImageSpan"/>
+            <TextView
+                android:id="@+id/alignMiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spanUtils_column_marginBottom"
+                android:lineSpacingExtra="6dp"
+                android:textColor="?attr/qmui_config_color_gray_5"
+                android:textSize="@dimen/spanUtils_common_textSize"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

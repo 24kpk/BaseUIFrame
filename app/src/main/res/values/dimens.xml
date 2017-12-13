@@ -3,4 +3,9 @@
     <!-- ListView -->
     <dimen name="list_divider_height">1px</dimen>
     <dimen name="list_divider_height_negative">-1px</dimen>
+
+
+    <!-- Span Utils 各种 Span 工具 -->
+    <dimen name="spanUtils_column_marginBottom">35dp</dimen>
+    <dimen name="spanUtils_common_textSize">16sp</dimen>
 </resources>

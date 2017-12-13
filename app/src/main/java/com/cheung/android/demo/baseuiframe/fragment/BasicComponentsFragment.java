@@ -25,6 +25,7 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarAc
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIPullRefreshLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIQQFaceViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIRadiusImageViewActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUISpanActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUISpanTouchFixTextViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUITipDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIVerticalTextViewActivity;
@@ -156,7 +157,18 @@ public class BasicComponentsFragment extends BaseFragment {
                             }
                         },1500);
                         break;
-
+                    case 16://Span
+                        dialog.setCancelable(true);
+                        dialog.show();
+//                        intent = new Intent(mActivity,QMUISpanTouchFixTextViewActivity.class);
+                        recyclerView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                dialog.dismiss();
+                            }
+                        },1500);
+//                        intent = new Intent(mActivity,QMUISpanActivity.class);
+                        break;
 
 
 
