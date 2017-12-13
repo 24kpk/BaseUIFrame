@@ -23,12 +23,14 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUILinkTextViewA
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIPopupActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIPullRefreshLayoutActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIQQFaceViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIRadiusImageViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUISpanTouchFixTextViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUITipDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIVerticalTextViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
+import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,6 +89,7 @@ public class BasicComponentsFragment extends BaseFragment {
             @Override
             public void onItemClick(View view, int i) {
                 Intent intent = null;
+                final QMUITipDialog dialog =  new QMUITipDialog.Builder(mActivity).setIconType(QMUITipDialog.Builder.ICON_TYPE_FAIL).setTipWord("稍后测试该控件").create();
                 switch (i) {
                     case 0://RoundButton
                         intent = new Intent(mActivity, RoundButtonActivity.class);
@@ -129,11 +132,33 @@ public class BasicComponentsFragment extends BaseFragment {
                         intent = new Intent(mActivity,QMUIPopupActivity.class);
                         break;
                     case 13://QMUISpanTouchFixTextView
-                        intent = new Intent(mActivity,QMUISpanTouchFixTextViewActivity.class);
+                        dialog.setCancelable(true);
+                        dialog.show();
+//                        intent = new Intent(mActivity,QMUISpanTouchFixTextViewActivity.class);
+                        recyclerView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                dialog.dismiss();
+                            }
+                        },1500);
                         break;
                     case 14://QMUILinkTextView
                         intent = new Intent(mActivity,QMUILinkTextViewActivity.class);
                         break;
+                    case 15://QMUIQQFaceView
+                        dialog.setCancelable(true);
+                        dialog.show();
+//                        intent = new Intent(mActivity,QMUIQQFaceViewActivity.class);
+                        recyclerView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                dialog.dismiss();
+                            }
+                        },1500);
+                        break;
+
+
+
 
                 }
                 if(intent == null) {
@@ -141,6 +166,7 @@ public class BasicComponentsFragment extends BaseFragment {
                 }
                 intent.putExtra(MyApp.INTENT_VALUE_TITLE_STR, listDate.get(i));
                 startActivity(intent);
+
             }
         });
     }

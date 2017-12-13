@@ -28,7 +28,8 @@
         <activity android:name=".components.activity.QMUIPullRefreshLayoutActivity" />
         <activity android:name=".components.activity.QMUIPopupActivity" />
         <activity android:name=".components.activity.QMUISpanTouchFixTextViewActivity" />
-        <activity android:name=".components.activity.QMUILinkTextViewActivity"></activity>
+        <activity android:name=".components.activity.QMUILinkTextViewActivity" />
+        <activity android:name=".components.activity.QMUIQQFaceViewActivity"></activity>
     </application>
 
 </manifest>
