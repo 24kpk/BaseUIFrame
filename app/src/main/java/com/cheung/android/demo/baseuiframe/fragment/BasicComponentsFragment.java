@@ -9,12 +9,14 @@ import android.view.View;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.cheung.android.base.baseuiframe.activity.BaseFragment;
+import com.cheung.android.base.baseuiframe.log.Print;
 import com.cheung.android.base.baseuiframe.recyclerview.decorator.DividerItemDecoration;
 import com.cheung.android.base.baseuiframe.recyclerview.decorator.GridDividerItemDecoration;
 import com.cheung.android.base.baseuiframe.utils.ToastUtil;
 import com.cheung.android.demo.baseuiframe.MyApp;
 import com.cheung.android.demo.baseuiframe.R;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIBottomSheetActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUICollapsingTopBarLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIEmptyViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
@@ -169,7 +171,10 @@ public class BasicComponentsFragment extends BaseFragment {
                         },1500);
 //                        intent = new Intent(mActivity,QMUISpanActivity.class);
                         break;
-
+                    case 17:
+                        Print.d("22222222222222");
+                        intent = new Intent(mActivity,QMUICollapsingTopBarLayoutActivity.class);
+                        break;
 
 
                 }

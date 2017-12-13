@@ -30,7 +30,8 @@
         <activity android:name=".components.activity.QMUISpanTouchFixTextViewActivity" />
         <activity android:name=".components.activity.QMUILinkTextViewActivity" />
         <activity android:name=".components.activity.QMUIQQFaceViewActivity" />
-        <activity android:name=".components.activity.QMUISpanActivity"></activity>
+        <activity android:name=".components.activity.QMUISpanActivity" />
+        <activity android:name=".components.activity.QMUICollapsingTopBarLayoutActivity"></activity>
     </application>
 
 </manifest>
