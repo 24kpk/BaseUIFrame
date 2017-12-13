@@ -26,7 +26,7 @@ public class QMUISpanTouchFixTextViewActivity extends BaseUIActivity {
             topBar.setTitle(title);
         }
 
-        QMUITipDialog dialog =  new QMUITipDialog.Builder(mActivity).setIconType(QMUITipDialog.Builder.ICON_TYPE_FAIL).setTipWord("稍后测试该空间").create();
+        QMUITipDialog dialog =  new QMUITipDialog.Builder(mActivity).setIconType(QMUITipDialog.Builder.ICON_TYPE_FAIL).setTipWord("稍后测试该控件").create();
         dialog.setCancelable(true);
         dialog.show();
     }
