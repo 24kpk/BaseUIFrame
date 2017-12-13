@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context="com.cheung.android.demo.baseuiframe.components.activity.QMUILinkTextViewActivity">
+    <com.qmuiteam.qmui.widget.textview.QMUILinkTextView
+        android:id="@+id/link_text_view"
+        style="@style/QDCommonDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="left"
+        android:text="可以自动识别网页链接，例如 http://www.qmuiteam.com。\n可以自动识别电话号码，例如 13600000000。\n也可以识别邮件地址，例如 qmuiteam@gmail.com。\n我们可以为其添加自定义的点击事件。"
+
+        app:qmui_linkBackgroundColor="@drawable/s_app_color_gray"
+        app:qmui_linkTextColor="@drawable/s_app_color_blue_2"/>
+</LinearLayout>

@@ -423,3 +423,8 @@ QMUIVerticalTextView实现对文字的垂直排版。对非 CJK (中文、日文
 
 ### QMUIPopup ###
 QMUIPopup初始化时不好控制
+
+### QMUILinkTextView ###
+QMUILinkTextView 能自动识别 URL、电话、邮箱地址。
+
+可以通过`setOnLinkClickListener(QMUILinkTextView.OnLinkClickListener)`设置链接的点击事件
