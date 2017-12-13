@@ -397,3 +397,23 @@ Java代码
 	dialog = new QMUITipDialog.CustomBuilder(mActivity)
 	                        .setContent(R.layout.tipdialog_custom)
 	                        .create();
+
+### QMUIRadiusImageView ###
+默认样式：圆形效果
+设置border颜色和宽度
+
+	app:qmui_border_color="?attr/qmui_config_color_gray_6"
+	app:qmui_border_width="2dp"
+默认没有点击效果 若需点击效果需打开clickable并设置点选效果
+
+	android:clickable="true"
+	app:qmui_selected_border_color="?attr/qmui_config_color_gray_4"
+    app:qmui_selected_border_width="1px"
+    app:qmui_selected_mask_color="?attr/qmui_config_color_gray_8"
+默认样式：圆形效果 若需椭圆效果
+
+	app:qmui_is_oval="true"
+    app:qmui_is_circle="false"
+当设置矩形效果时 `app:qmui_is_circle="false"` && `app:qmui_is_oval="false"`可设置边角圆角
+
+	app:qmui_corner_radius="15dp"

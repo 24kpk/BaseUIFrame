@@ -1,9 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.cheung.android.demo.baseuiframe.components.activity.QMUIRadiusImageViewActivity">
+    <ScrollView
+        android:id="@+id/contentWrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qmui_config_color_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="25dp">
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="剪裁为圆形+边框+点击效果"/>
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ttimg"
+                app:qmui_border_color="?attr/qmui_config_color_gray_6"
+                app:qmui_border_width="2dp"
 
-</android.support.constraint.ConstraintLayout>
+
+                android:clickable="true"
+                app:qmui_selected_border_color="?attr/qmui_config_color_gray_4"
+                app:qmui_selected_border_width="1px"
+                app:qmui_selected_mask_color="?attr/qmui_config_color_gray_8"
+                />
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="剪裁为椭圆形+边框"/>
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ttimg"
+                app:qmui_border_color="?attr/qmui_config_color_gray_6"
+                app:qmui_border_width="2dp"
+                app:qmui_is_oval="true"
+                app:qmui_is_circle="false"
+                />
+            <TextView
+                style="@style/QDCommonTitle"
+                android:text="剪裁为圆角矩形+边框+点击效果"/>
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ttimg"
+                app:qmui_border_color="?attr/qmui_config_color_gray_6"
+                app:qmui_border_width="2dp"
+                app:qmui_is_circle="false"
+
+
+                android:clickable="true"
+                app:qmui_corner_radius="15dp"
+                app:qmui_selected_border_color="?attr/qmui_config_color_gray_4"
+                app:qmui_selected_border_width="1px"
+                app:qmui_selected_mask_color="?attr/qmui_config_color_gray_8"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
