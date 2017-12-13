@@ -420,3 +420,6 @@ Java代码
 
 ### QMUIVerticalTextView ###
 QMUIVerticalTextView实现对文字的垂直排版。对非 CJK (中文、日文、韩文)字符做90度旋转排版。
+
+### QMUIPopup ###
+QMUIPopup初始化时不好控制

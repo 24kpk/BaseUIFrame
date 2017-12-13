@@ -19,6 +19,7 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUIDialogActivit
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIEmptyViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIGroupListViewActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIPopupActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIPullRefreshLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIRadiusImageViewActivity;
@@ -121,6 +122,9 @@ public class BasicComponentsFragment extends BaseFragment {
                         break;
                     case 11://QMUIPullRefreshLayout
                         intent = new Intent(mActivity,QMUIPullRefreshLayoutActivity.class);
+                        break;
+                    case 12:
+                        intent = new Intent(mActivity,QMUIPopupActivity.class);
                         break;
 
                 }
