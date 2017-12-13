@@ -31,6 +31,7 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUISpanActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUISpanTouchFixTextViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUITipDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIVerticalTextViewActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIViewPagerActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog;
@@ -74,15 +75,15 @@ public class BasicComponentsFragment extends BaseFragment {
             listDate.add(s);
         }
 
-//        //线性布局
-//        recyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
-//        //设置分割线
-//        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL_LIST));
-
-        //表格布局
-        recyclerView.setLayoutManager(new GridLayoutManager(mActivity,3));
+        //线性布局
+        recyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
         //设置分割线
-        recyclerView.addItemDecoration(new GridDividerItemDecoration(getContext(), 3));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL_LIST));
+
+//        //表格布局
+//        recyclerView.setLayoutManager(new GridLayoutManager(mActivity,3));
+//        //设置分割线
+//        recyclerView.addItemDecoration(new GridDividerItemDecoration(getContext(), 3));
 
         adapter = new BasicComponentsListAdapter(android.R.layout.simple_list_item_1, null);
         recyclerView.setAdapter(adapter);
@@ -171,11 +172,21 @@ public class BasicComponentsFragment extends BaseFragment {
                         },1500);
 //                        intent = new Intent(mActivity,QMUISpanActivity.class);
                         break;
-                    case 17:
-                        Print.d("22222222222222");
+                    case 17://QMUICollapsingTopBar
                         intent = new Intent(mActivity,QMUICollapsingTopBarLayoutActivity.class);
                         break;
-
+                    case 18://QMUIViewPager
+                        dialog.setCancelable(true);
+                        dialog.show();
+//                        intent = new Intent(mActivity,QMUISpanTouchFixTextViewActivity.class);
+                        recyclerView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                dialog.dismiss();
+                            }
+                        },1500);
+//                        intent = new Intent(mActivity,QMUIViewPagerActivity.class);
+                        break;
 
                 }
                 if(intent == null) {
