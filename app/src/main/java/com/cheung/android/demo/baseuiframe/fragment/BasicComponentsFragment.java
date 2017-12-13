@@ -20,6 +20,7 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUIEmptyViewActi
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIFloatLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIGroupListViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIPullRefreshLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIRadiusImageViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUITipDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIVerticalTextViewActivity;
@@ -65,15 +66,15 @@ public class BasicComponentsFragment extends BaseFragment {
             listDate.add(s);
         }
 
-        //线性布局
-        recyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
-        //设置分割线
-        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL_LIST));
-
-//        //表格布局
-//        recyclerView.setLayoutManager(new GridLayoutManager(mActivity,3));
+//        //线性布局
+//        recyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
 //        //设置分割线
-//        recyclerView.addItemDecoration(new GridDividerItemDecoration(getContext(), 3));
+//        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), VERTICAL_LIST));
+
+        //表格布局
+        recyclerView.setLayoutManager(new GridLayoutManager(mActivity,3));
+        //设置分割线
+        recyclerView.addItemDecoration(new GridDividerItemDecoration(getContext(), 3));
 
         adapter = new BasicComponentsListAdapter(android.R.layout.simple_list_item_1, null);
         recyclerView.setAdapter(adapter);
@@ -117,6 +118,9 @@ public class BasicComponentsFragment extends BaseFragment {
                         break;
                     case 10://QMUIVerticalTextView
                         intent = new Intent(mActivity,QMUIVerticalTextViewActivity.class);
+                        break;
+                    case 11://QMUIPullRefreshLayout
+                        intent = new Intent(mActivity,QMUIPullRefreshLayoutActivity.class);
                         break;
 
                 }

@@ -24,7 +24,8 @@
         <activity android:name=".components.activity.QMUIGroupListViewActivity" />
         <activity android:name=".components.activity.QMUITipDialogActivity" />
         <activity android:name=".components.activity.QMUIRadiusImageViewActivity" />
-        <activity android:name=".components.activity.QMUIVerticalTextViewActivity"></activity>
+        <activity android:name=".components.activity.QMUIVerticalTextViewActivity" />
+        <activity android:name=".components.activity.QMUIPullRefreshLayoutActivity"></activity>
     </application>
 
 </manifest>
