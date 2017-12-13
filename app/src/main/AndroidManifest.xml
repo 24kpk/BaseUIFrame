@@ -23,7 +23,8 @@
         <activity android:name=".components.activity.QMUIBottomSheetActivity" />
         <activity android:name=".components.activity.QMUIGroupListViewActivity" />
         <activity android:name=".components.activity.QMUITipDialogActivity" />
-        <activity android:name=".components.activity.QMUIRadiusImageViewActivity"></activity>
+        <activity android:name=".components.activity.QMUIRadiusImageViewActivity" />
+        <activity android:name=".components.activity.QMUIVerticalTextViewActivity"></activity>
     </application>
 
 </manifest>

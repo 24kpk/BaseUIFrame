@@ -22,6 +22,7 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUIGroupListView
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIRadiusImageViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUITipDialogActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUIVerticalTextViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 
@@ -113,6 +114,9 @@ public class BasicComponentsFragment extends BaseFragment {
                         break;
                     case 9://QMUIRadiusImageView
                         intent = new Intent(mActivity,QMUIRadiusImageViewActivity.class);
+                        break;
+                    case 10://QMUIVerticalTextView
+                        intent = new Intent(mActivity,QMUIVerticalTextViewActivity.class);
                         break;
 
                 }

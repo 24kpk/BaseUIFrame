@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cheung.android.demo.baseuiframe.components.activity.QMUIVerticalTextViewActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qmui_config_color_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/qmui_content_spacing_horizontal"
+            android:paddingRight="@dimen/qmui_content_spacing_horizontal"
+            android:paddingTop="40dp">
+            <com.qmuiteam.qmui.widget.QMUIVerticalTextView
+                android:id="@+id/verticalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="40dp"
+                android:background="?attr/qmui_config_color_gray_9"
+                android:lineSpacingExtra="6dp"
+                android:padding="6dp"
+                android:textColor="?attr/qmui_config_color_gray_1"
+                android:text="介绍完以上几大亮点，最后再说点个人觉得唯一的不足之处，就是如果QMUI Android的文档能像QMUI Web一样完善，那就更好了"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/verticalTextView_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/qmui_divider_bottom_bitmap"
+                android:hint="在此输入文字, 看垂直排版的效果"
+                android:paddingBottom="6dp"
+                android:singleLine="true"
+                android:textColor="@color/app_color_description"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

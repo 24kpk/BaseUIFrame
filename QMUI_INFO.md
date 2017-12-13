@@ -417,3 +417,6 @@ Java代码
 当设置矩形效果时 `app:qmui_is_circle="false"` && `app:qmui_is_oval="false"`可设置边角圆角
 
 	app:qmui_corner_radius="15dp"
+
+### QMUIVerticalTextView ###
+QMUIVerticalTextView实现对文字的垂直排版。对非 CJK (中文、日文、韩文)字符做90度旋转排版。
