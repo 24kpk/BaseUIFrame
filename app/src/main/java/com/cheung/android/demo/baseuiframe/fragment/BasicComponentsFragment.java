@@ -23,6 +23,7 @@ import com.cheung.android.demo.baseuiframe.components.activity.QMUIPopupActivity
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIProgressBarActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIPullRefreshLayoutActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIRadiusImageViewActivity;
+import com.cheung.android.demo.baseuiframe.components.activity.QMUISpanTouchFixTextViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUITipDialogActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.QMUIVerticalTextViewActivity;
 import com.cheung.android.demo.baseuiframe.components.activity.RoundButtonActivity;
@@ -123,8 +124,11 @@ public class BasicComponentsFragment extends BaseFragment {
                     case 11://QMUIPullRefreshLayout
                         intent = new Intent(mActivity,QMUIPullRefreshLayoutActivity.class);
                         break;
-                    case 12:
+                    case 12://QMUIPopup
                         intent = new Intent(mActivity,QMUIPopupActivity.class);
+                        break;
+                    case 13://QMUISpanTouchFixTextView
+                        intent = new Intent(mActivity,QMUISpanTouchFixTextViewActivity.class);
                         break;
 
                 }

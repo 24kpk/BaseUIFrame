@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cheung.android.demo.baseuiframe.components.activity.QMUISpanTouchFixTextViewActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/qmui_config_color_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+            <TextView
+                style="@style/QDCommonTitle"
+                android:layout_marginTop="10dp"
+                android:text="TextView系统行为"/>
+
+            <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+                android:id="@+id/touch_fix_tv_1"
+                style="@style/QDCommonDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/s_app_touch_fix_area_bg"
+                android:gravity="left"
+                android:padding="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
