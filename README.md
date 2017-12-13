@@ -19,7 +19,7 @@ BaseUIFrame已经更新到[jitpack](https://jitpack.io/)上，使用AndroidStudi
 **Step 2** 在App项目引用 **build.gradle** 中添加
 
 	dependencies {
-	        compile 'com.github.24kpk:BaseUIFrame:1.0.2'
+	        compile 'com.github.24kpk:BaseUIFrame:1.0.3'
 	}
 
 **Step 3** 样式引用
