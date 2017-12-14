@@ -89,7 +89,7 @@ Application的Theme**继承BaseUIFrameAppTheme**
     
     
 ## [基础组件QMUI组件说明](http://qmuiteam.com/android/page/document.html) ##
-注：部分组件未理解到位
+注：部分组件未理解到位 [详见](https://github.com/24kpk/BaseUIFrame/blob/master/QMUI_INFO.md)
 
 
 # END 项目地址 [GitHub](https://github.com/24kpk/BaseUIFrame.git)
