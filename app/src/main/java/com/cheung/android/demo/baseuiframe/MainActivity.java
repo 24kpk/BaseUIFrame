@@ -40,6 +40,7 @@ public class MainActivity extends BaseUIActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ButterKnife.setDebug(true);
         ButterKnife.bind(mActivity);
 
         int normalColor = QMUIResHelper.getAttrColor(mActivity, R.attr.qmui_config_color_gray_6);
