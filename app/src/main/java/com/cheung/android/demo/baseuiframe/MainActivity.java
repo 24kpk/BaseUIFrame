@@ -40,7 +40,7 @@ public class MainActivity extends BaseUIActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ButterKnife.bind(mActivity);
+        ButterKnife.bind(mActivity);//在使用的主Model中compile
 
         int normalColor = QMUIResHelper.getAttrColor(mActivity, R.attr.qmui_config_color_gray_6);
         int selectColor = QMUIResHelper.getAttrColor(mActivity, R.attr.qmui_config_color_blue);
